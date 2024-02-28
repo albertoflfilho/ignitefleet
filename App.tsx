@@ -7,6 +7,8 @@ import { SignIn } from './src/screens/SignIn';
 import { Loading } from './src/components/Loading';
 import { StatusBar } from 'expo-status-bar';
 
+import { ANDROID_CLIENT_ID } from '@env'
+
 export default function App() {
   const [ fontsLoaded ] = useFonts({ Roboto_400Regular, Roboto_700Bold });
 
