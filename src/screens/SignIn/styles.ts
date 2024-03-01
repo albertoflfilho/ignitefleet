@@ -16,6 +16,7 @@ export const Title = styled.Text`
 
 export const Slogan = styled.Text`
   color: ${({ theme }) => theme.COLORS.GRAY_100};
+  letter-spacing: 4px;
   font-size: ${({ theme }) => theme.FONT_SIZE.MD}px;
   font-family: ${({ theme }) => theme.FONT_FAMILY.REGULAR};
   text-align: center;
