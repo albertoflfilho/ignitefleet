@@ -1,7 +1,8 @@
 import { ThemeProvider } from 'styled-components/native';
-import { useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/roboto';
 import { StatusBar } from 'expo-status-bar';
 import { AppProvider, UserProvider } from '@realm/react';
+import { SafeAreaProvider } from 'react-native-safe-area-context'; 
+import { useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/roboto';
 
 import theme from './src/theme';
 
@@ -23,6 +24,7 @@ export default function App() {
   }
 
   return (
+    <SafeAreaProvider>
     <AppProvider id={REALM_APP_ID}>
       <ThemeProvider theme={theme}>
         <StatusBar
@@ -35,5 +37,6 @@ export default function App() {
         </UserProvider>
       </ThemeProvider>
     </AppProvider>
+    </SafeAreaProvider>
   );
 }
